@@ -1,16 +1,36 @@
-### Hi there 👋
+PREVIEW
+MARKDOWN
+COPY
+Hi 👋 My name is Roberto Hernandez
+==================================
 
-<!--
-**RobertoEfrainHernandez/RobertoEfrainHernandez** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Software Engineer - iOS
+-----------------------
 
-Here are some ideas to get you started:
+I am an iOS Engineer originally from New York City and currently based in Los Angeles, California. In 2017, I graduated with a MS in Software Development from Pace University. I also earned a certificate by completing a Udacity Nanodegree in iOS Development in 2018. I recently worked with a startup called HoopStop Mobile LLC as an iOS Engineer where I helped build its native iOS app using Swift, SwiftUI, Xcode, and other Apple SDKs. I currently work at Tapcart as a Software Engineer, iOS on their Consumer team. In my spare time I consistently continues to advance my skills in iOS by building upon my knowledge of SwiftUI, Combine, Server-Side-Swift with Vapor, and XCTesting for Swift.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+* 🌍  I'm based in Los Angeles, CA
+* 🖥️  See my portfolio at [https://www.robertoefrainhernandez.com/](http://www.robertoefrainhernandez.com/)
+* ✉️  You can contact me at [reh9019@gmail.com](mailto:reh9019@gmail.com)
+
+### Skills
+
+<p align="left">
+<a href="https://developer.apple.com/swift/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/swift-colored.svg" width="36" height="36" alt="Swift" /></a>
+<a href="https://firebase.google.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/firebase-colored.svg" width="36" height="36" alt="Firebase" /></a>
+<a href="https://www.figma.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/figma-colored.svg" width="36" height="36" alt="Figma" /></a>
+<a href="https://www.sketch.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/sketch-colored.svg" width="36" height="36" alt="Sketch" /></a>
+</p>
+
+### Socials
+
+<p align="left"> <a href="https://www.github.com/RobertoEfrainHernandez" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="32" height="32" /></a> <a href="http://www.instagram.com/PreachOnBerto" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/instagram.svg" width="32" height="32" /></a> <a href="https://www.linkedin.com/in/RobertoEfrainHernandez" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="32" height="32" /></a> <a href="https://www.twitter.com/PreachOnBerto" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/twitter.svg" width="32" height="32" /></a></p>
+### Badges
+
+<b>My GitHub Stats</b>
+
+<a href="http://www.github.com/RobertoEfrainHernandez"><img src="https://github-readme-stats.vercel.app/api?username=RobertoEfrainHernandez&show_icons=true&hide=stars,&count_private=true&title_color=ef4444&text_color=ffffff&icon_color=ef4444&bg_color=181824&hide_border=true&show_icons=true" alt="RobertoEfrainHernandez's GitHub stats" /></a>
+
+<a href="http://www.github.com/RobertoEfrainHernandez"><img src="https://github-readme-streak-stats.herokuapp.com/?user=RobertoEfrainHernandez&stroke=ffffff&background=181824&ring=ef4444&fire=ef4444&currStreakNum=ffffff&currStreakLabel=ef4444&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" /></a>
+
+<a href="https://github.com/RobertoEfrainHernandez" align="left"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=RobertoEfrainHernandez&langs_count=10&title_color=ef4444&text_color=ffffff&icon_color=ef4444&bg_color=181824&hide_border=true&locale=en&custom_title=Top%20%Languages" alt="Top Languages" /></a>
