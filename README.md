@@ -4,7 +4,7 @@ Hi 👋 My name is Roberto Hernandez
 Software Engineer - iOS
 -----------------------
 
-I am an iOS Engineer originally from New York City and currently based in Los Angeles, California. In 2017, I graduated with a MS in Software Development from Pace University. I also earned a certificate by completing a Udacity Nanodegree in iOS Development in 2018. I recently worked with a startup called HoopStop Mobile LLC as an iOS Engineer where I helped build its native iOS app using Swift, SwiftUI, Xcode, and other Apple SDKs. I currently work at Tapcart as a Software Engineer, iOS on their Consumer team. In my spare time I consistently continues to advance my skills in iOS by building upon my knowledge of SwiftUI, Combine, Server-Side-Swift with Vapor, and XCTesting for Swift.
+I am an iOS Engineer originally from New York City and currently based in Los Angeles, California. In 2017, I graduated with a MS in Software Development from Pace University. I also earned a certificate by completing a Udacity Nanodegree in iOS Development in 2018. I recently worked with a early stage startup called HoopStop as an iOS Engineer where I helped build its native iOS app using Swift, SwiftUI, and other Apple SDKs. I currently work at Tapcart as a **Software Engineer - iOS** on their Core team building out core features for the Tapcart iOS app and Analytics SDK. In my spare time I consistently continue to advance my skills in iOS by building upon my knowledge of SwiftUI, Combine, Server-Side-Swift with Vapor, and XCTesting for Swift.
 
 * 🌍  I'm based in Los Angeles, CA
 * 🖥️  See my portfolio at [Roberto Efrain Hernandez](http://www.robertoefrainhernandez.com/)
