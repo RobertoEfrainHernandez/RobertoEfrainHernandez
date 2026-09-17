@@ -220,9 +220,83 @@ h2{font-size:44px;margin-top:10px}
 """
     render("footer", theme, 1200, 200, body, css)
 
+
+# ---------------------------------------------------------------- github stats (real numbers, rendered)
+def stats(theme):
+    import json, datetime, subprocess as sp
+    q = '{ user(login:"RobertoEfrainHernandez"){ createdAt repositories(privacy:PUBLIC){totalCount} contributionsCollection{ restrictedContributionsCount contributionCalendar{ totalContributions weeks{ contributionDays{ contributionCount } } } } } }'
+    d = json.loads(sp.run(["gh","api","graphql","-f",f"query={q}"], capture_output=True, text=True, check=True).stdout)["data"]["user"]
+    cal = d["contributionsCollection"]["contributionCalendar"]
+    weeks = [sum(x["contributionCount"] for x in w["contributionDays"]) for w in cal["weeks"]]
+    total, private = cal["totalContributions"], d["contributionsCollection"]["restrictedContributionsCount"]
+    pct = round(100 * private / max(total, 1))
+    mx = max(weeks) or 1
+    bars = "".join(f'<i style="height:{max(6, round(100*w/mx))}%;{"background:var(--purple)" if w else ""}"></i>' for w in weeks)
+    since = d["createdAt"][:4]; today = datetime.date.today().strftime("%b %Y")
+    body = f"""
+<div class="stage" style="background:transparent"><div class="card">
+  <div class="left">
+    <div class="eyebrow">GitHub · past 12 months</div>
+    <div class="tiles">
+      <div><b>{total}</b><span>contributions</span></div>
+      <div><b>{pct}%</b><span>in private product repos</span></div>
+      <div><b>{d["repositories"]["totalCount"]}</b><span>public repos</span></div>
+      <div><b>{since}</b><span>on GitHub since</span></div>
+    </div>
+    <p class="note">The graph undercounts the work: Understudy and PointsCompass live in private repos. <span class="em">The apps are the evidence.</span></p>
+  </div>
+  <div class="right"><div class="spark">{bars}</div><div class="axis"><span>{(datetime.date.today()-datetime.timedelta(weeks=52)).strftime("%b %Y")}</span><span>one bar per week</span><span>{today}</span></div></div>
+</div></div>"""
+    css = """
+.card{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;height:100%;margin:6px;background:var(--card);border:1px solid var(--stroke);border-radius:28px;padding:28px 36px;align-items:center}
+.left{display:flex;flex-direction:column;gap:16px}
+.tiles{display:flex;gap:28px}
+.tiles div{display:flex;flex-direction:column;gap:2px}
+.tiles b{font-size:30px;font-weight:900;letter-spacing:-.03em}.tiles span{font-size:11.5px;color:var(--muted);font-weight:800;letter-spacing:.05em;text-transform:uppercase}
+.note{color:var(--muted);font-size:14px;line-height:1.45;max-width:46ch;font-weight:700}
+.note .em{color:var(--ink);font-size:15px}
+.right{display:flex;flex-direction:column;gap:10px;height:100%;justify-content:center}
+.spark{display:flex;align-items:flex-end;gap:4px;height:120px;padding:0 2px}
+.spark i{flex:1;border-radius:4px 4px 2px 2px;background:var(--purple-soft);min-width:0}
+.axis{display:flex;justify-content:space-between;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--faint)}
+"""
+    render("stats", theme, 1200, 240, body, css, transparent=True)
+
+
+# ---------------------------------------------------------------- work + beyond, card grids
+CARD_CSS = """
+.g{display:grid;gap:16px;height:100%;padding:6px}
+.c{background:var(--card);border:1px solid var(--stroke);border-radius:28px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.ic{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;font-size:22px;font-weight:900}
+h3{font-size:21px;letter-spacing:-.02em;line-height:1.15}
+.role{font-size:13px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--purple)}
+.role span{color:var(--faint)}
+p{color:var(--muted);font-size:14.5px;line-height:1.45;font-weight:700}
+"""
+WORK = [
+ ("🧪", "Berto Labs", "Founder, iOS", "2025 – present", "Understudy (App Store, 2026) and PointsCompass (in development). Design, build, backend, store listing, marketing, the lot.", "estate"),
+ ("🏢", "Tapcart", "Software Engineer II, iOS", "2021 – 2025", "E-commerce features for 1,500+ Shopify merchants: checkout and payment flows, custom UI, end-to-end ownership with product and design. Helped with the React Native transition.", "stocks"),
+ ("🏀", "HoopStop", "iOS Engineer", "2018 – 2021", "Early-stage sports social network. Real-time updates, media uploads, location features. UIKit to SwiftUI migration. Swift, Core Data, Firebase.", "business"),
+]
+def work(theme):
+    cards = "".join(f"""<div class="c"><div class="ic" style="background:var(--{t});color:var(--{t}-ink)">{ic}</div><h3>{co}</h3><div class="role">{role} <span>· {yrs}</span></div><p>{desc}</p></div>""" for ic, co, role, yrs, desc, t in WORK)
+    body = f'<div class="stage" style="background:transparent"><div class="g" style="grid-template-columns:repeat(3,1fr)">{cards}</div></div>'
+    render("work", theme, 1200, 262, body, CARD_CSS, transparent=True)
+
+BEYOND = [
+ ("⚾️", "Sports", "Falcons, USMNT, Knicks, Mets, Giants. Following the games keeps me sharp and competitive.", "stocks"),
+ ("🎸", "Guitar", "A Martin acoustic and a slow, happy climb up the fretboard. Where the creative thinking happens.", "business"),
+ ("☕️", "Coffee", "Quality coffee, quality code. It's science.", "estate"),
+ ("📚", "Curious", "iOS, system design, whatever's next. Always exploring something new.", "bonds"),
+]
+def beyond(theme):
+    cards = "".join(f"""<div class="c"><div class="ic" style="background:var(--{t});color:var(--{t}-ink)">{ic}</div><h3>{h}</h3><p>{d}</p></div>""" for ic, h, d, t in BEYOND)
+    body = f'<div class="stage" style="background:transparent"><div class="g" style="grid-template-columns:repeat(4,1fr)">{cards}</div></div>'
+    render("beyond", theme, 1200, 236, body, CARD_CSS, transparent=True)
+
 if __name__ == "__main__":
     import sys
-    which = sys.argv[1:] or ["hero", "sections", "showcase", "principles", "pills", "footer"]
+    which = sys.argv[1:] or ["hero", "sections", "showcase", "principles", "pills", "footer", "stats", "work", "beyond"]
     for theme in ("light", "dark"):
         if "hero" in which: hero(theme)
         if "sections" in which:
@@ -231,3 +305,6 @@ if __name__ == "__main__":
         if "principles" in which: principles(theme)
         if "pills" in which: pills(theme)
         if "footer" in which: footer(theme)
+        if "stats" in which: stats(theme)
+        if "work" in which: work(theme)
+        if "beyond" in which: beyond(theme)
