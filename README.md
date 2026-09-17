@@ -4,7 +4,7 @@
 </picture>
 
 <p align="center">
-  <a href="https://www.robertoefrainhernandez.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-portfolio-dark.png"><img src="assets/link-portfolio-light.png" height="52" alt="Portfolio"></picture></a>
+  <a href="https://bertolabs.com/understudy"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-understudy-dark.png"><img src="assets/link-understudy-light.png" height="52" alt="Understudy"></picture></a>
   <a href="https://www.linkedin.com/in/robertoefrainhernandez"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-linkedin-dark.png"><img src="assets/link-linkedin-light.png" height="52" alt="LinkedIn"></picture></a>
   <a href="https://twitter.com/PreachOnBerto"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-x-dark.png"><img src="assets/link-x-light.png" height="52" alt="@PreachOnBerto on X"></picture></a>
   <a href="mailto:reh9019@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-email-dark.png"><img src="assets/link-email-light.png" height="52" alt="Email me"></picture></a>
@@ -137,7 +137,7 @@ struct Roberto: iOSEngineer {
 <p align="center">
   <a href="mailto:reh9019@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-email-dark.png"><img src="assets/link-email-light.png" height="52" alt="Email me"></picture></a>
   <a href="https://www.linkedin.com/in/robertoefrainhernandez"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-linkedin-dark.png"><img src="assets/link-linkedin-light.png" height="52" alt="LinkedIn"></picture></a>
-  <a href="https://www.robertoefrainhernandez.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-portfolio-dark.png"><img src="assets/link-portfolio-light.png" height="52" alt="Portfolio"></picture></a>
+  <a href="https://bertolabs.com/understudy"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-understudy-dark.png"><img src="assets/link-understudy-light.png" height="52" alt="Understudy"></picture></a>
   <a href="https://twitter.com/PreachOnBerto"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-x-dark.png"><img src="assets/link-x-light.png" height="52" alt="@PreachOnBerto on X"></picture></a>
 </p>
 

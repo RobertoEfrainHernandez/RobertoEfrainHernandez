@@ -186,7 +186,7 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;back
     render("principles", theme, 1200, 250, body, css, transparent=True)
 
 # ---------------------------------------------------------------- link pills (auto-width)
-LINKS = [("portfolio", "Portfolio", "ink", "◎"), ("linkedin", "LinkedIn", "ghost", "in"), ("x", "@PreachOnBerto", "ghost", "𝕏"), ("email", "Email me", "ghost", "✉"),
+LINKS = [("understudy", "Understudy", "ink", "✦"), ("linkedin", "LinkedIn", "ghost", "in"), ("x", "@PreachOnBerto", "ghost", "𝕏"), ("email", "Email me", "ghost", "✉"),
          ("appstore", "Download on the App Store", "ink", "")]
 def pills(theme):
     for key, label, kind, ic in LINKS:
