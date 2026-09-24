@@ -51,7 +51,7 @@ struct Roberto: iOSEngineer {
     let name = "Roberto Hernandez"
     let location = "🌴 Los Angeles, CA"
     let origins = "🗽 NYC born and raised"
-    let company = "Berto Labs LLC, est. 2025"
+    let company = "Berto Labs LLC, est. 2026"
 
     let stack = [
         "Swift 6", "SwiftUI", "Swift Concurrency", "Swift Testing",
@@ -105,7 +105,7 @@ struct Roberto: iOSEngineer {
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/work-dark.png">
-  <img src="assets/work-light.png" width="100%" alt="Berto Labs, Founder, iOS, 2025 to present: Understudy (App Store, 2026) and PointsCompass (in development); design, build, backend, store listing, marketing. Tapcart, Software Engineer II, iOS, 2021 to 2025: e-commerce features for 1,500+ Shopify merchants, checkout and payment flows, custom UI, end-to-end ownership with product and design, helped with the React Native transition. HoopStop, iOS Engineer, 2018 to 2021: early-stage sports social network, real-time updates, media uploads, location features, UIKit to SwiftUI migration, Swift, Core Data, Firebase.">
+  <img src="assets/work-light.png" width="100%" alt="Berto Labs, Founder, iOS, 2026 to present: Understudy (App Store, 2026) and PointsCompass (in development); design, build, backend, store listing, marketing. Tapcart, Software Engineer II, iOS, 2021 to 2025: e-commerce features for 1,500+ Shopify merchants, checkout and payment flows, custom UI, end-to-end ownership with product and design, helped with the React Native transition. HoopStop, iOS Engineer, 2018 to 2021: early-stage sports social network, real-time updates, media uploads, location features, UIKit to SwiftUI migration, Swift, Core Data, Firebase.">
 </picture>
 
 <picture>
