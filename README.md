@@ -20,7 +20,7 @@
 <a href="https://bertolabs.com/understudy">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/understudy-dark.jpg">
-  <img src="assets/understudy-light.jpg" width="100%" alt="Understudy: Investing Practice, by Berto Labs. Rehearse investing before you risk a real dollar. A practice brokerage for beginners. In App Review, submitted Sept 14. RevenueCat Shipaton 2026. 8 Swift packages, 358 tests on Xcode Cloud, Swift 6 strict concurrency, iOS 26 on the iOS 27 SDK.">
+  <img src="assets/understudy-light.jpg" width="100%" alt="Understudy: Investing Practice, by Berto Labs, with its app icon: Cue, a theater ghost light, waving. Rehearse investing before you risk a real dollar. A practice brokerage for beginners. In App Review, submitted Sept 14. RevenueCat Shipaton 2026. 8 Swift packages, 400 tests on Xcode Cloud, Swift 6 strict concurrency, iOS 26 on the iOS 27 SDK. Three screens from the app: Pick a Path, a practice portfolio, and a bid-and-ask explainer. Every price simulated.">
 </picture>
 </a>
 
@@ -36,11 +36,11 @@
 | **Language** | Swift 6 with strict concurrency. `@MainActor` view models, an actor-isolated simulation engine, structured cancellation. iOS 26 deployment against the iOS 27 SDK, new APIs gated behind `#available`. |
 | **Persistence** | Offline first. One SQLite database (SQLiteData over GRDB) behind a single actor; every `Domain` contributes its own migrations through a `SchemaContributing` protocol and the root assembles them into one ordered list. In-progress rehearsals live here, so a session runs with no network. What deserves to outlive the device (financial profile, learning progress, session summaries) syncs to Supabase Postgres through a `RemoteSyncable` protocol that mirrors the local one. Preferences sit in a thin `UserDefaults` wrapper. No Keychain, on purpose: nothing in the app is worth one. |
 | **Backend** | Supabase. Silent anonymous sign-in on first launch, optional Apple or Google linking later, row-level security on every user table, account deletion through an edge function that checks the caller's token. |
-| **Tests** | 358 Swift Testing tests across six package test targets, run by Xcode Cloud on every push. |
+| **Tests** | 400 Swift Testing tests across seven package test targets, run by Xcode Cloud on every pull request and every push to `main`. |
 | **Monetization** | RevenueCat with a fully custom SwiftUI paywall: weekly, annual with a 7-day trial, lifetime. One entitlement. App Store guideline 3.1.2 checked line by line. |
 | **On-device AI** | Apple Foundation Models explain market events in plain English using the user's own numbers, with a static fallback. Nothing leaves the device. |
-| **Design** | A token-based design system (light canvas, three deliberate dim rooms), Liquid Glass, a commissioned illustration set, and App Store frames that share one visual language with the landing page. |
-| **Shipping** | App Store Connect driven from its API: review submission, TestFlight groups, attachments, metadata. A landing page, a two-minute demo cut rendered with AVFoundation, and a release cadence written down before 1.0 shipped. |
+| **Design** | A token-based design system (light canvas, three deliberate dim rooms), Liquid Glass, and Cue: a theater ghost-light mascot with its own character rules, AI-rendered from one locked character reference, with the app icon and illustrations built from it. App Store frames share one visual language with the landing page. |
+| **Shipping** | App Store Connect driven from its API: review submission, TestFlight groups, attachments, metadata. A landing page, a two-minute demo cut rendered with AVFoundation, and a release cadence written down while 1.0 was still in review. |
 
 **Next in the same stack:** [PointsCompass](https://bertolabs.com), travel rewards optimization. Transfer chains across loyalty programs, award search, and booking without leaving the app.
 
@@ -51,7 +51,7 @@ struct Roberto: iOSEngineer {
     let name = "Roberto Hernandez"
     let location = "🌴 Los Angeles, CA"
     let origins = "🗽 NYC born and raised"
-    let company = "Berto Labs LLC, est. 2026"
+    let company = "Berto Labs LLC, est. Aug 2026"
 
     let stack = [
         "Swift 6", "SwiftUI", "Swift Concurrency", "Swift Testing",
@@ -67,7 +67,7 @@ struct Roberto: iOSEngineer {
 
     /// Dated on purpose. If this is more than a season old, it's stale.
     let focus_fall2026 = [
-        "Understudy 1.x: real estate, business and bond paths",
+        "Understudy 2.x: real estate, business and bond paths",
         "iOS 27: App Intents, MetricKit, the Evaluations framework",
         "Adaptive layouts for iPhone Duo and iPad",
         "PointsCompass to TestFlight"
@@ -105,12 +105,12 @@ struct Roberto: iOSEngineer {
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/work-dark.png">
-  <img src="assets/work-light.png" width="100%" alt="Berto Labs, Founder, iOS, 2026 to present: Understudy (App Store, 2026) and PointsCompass (in development); design, build, backend, store listing, marketing. Tapcart, Software Engineer II, iOS, 2021 to 2025: e-commerce features for 1,500+ Shopify merchants, checkout and payment flows, custom UI, end-to-end ownership with product and design, helped with the React Native transition. HoopStop, iOS Engineer, 2018 to 2021: early-stage sports social network, real-time updates, media uploads, location features, UIKit to SwiftUI migration, Swift, Core Data, Firebase.">
+  <img src="assets/work-light.png" width="100%" alt="Berto Labs, Founder, iOS, August 2026 to present: Understudy (iOS, 2026) and PointsCompass (in development); design, build, backend, store listing, marketing. Tapcart, Software Engineer II, iOS, 2021 to 2025: e-commerce features for 1,500+ Shopify merchants, checkout and payment flows, custom UI, end-to-end ownership with product and design, helped with the React Native transition. HoopStop, iOS Engineer, 2018 to 2021: early-stage sports social network, real-time updates, media uploads, location features, UIKit to SwiftUI migration, Swift, Core Data, Firebase.">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.png">
-  <img src="assets/stats-light.png" width="100%" alt="GitHub, past 12 months: 128 contributions, 98% in private product repos, 22 public repos, on GitHub since 2016. The graph undercounts the work: Understudy and PointsCompass live in private repos. The apps are the evidence.">
+  <img src="assets/stats-light.png" width="100%" alt="GitHub, past 12 months: 204 contributions, 98% in private product repos, 22 public repos, on GitHub since 2016. The graph undercounts the work: Understudy and PointsCompass live in private repos. The apps are the evidence.">
 </picture>
 
 <br>

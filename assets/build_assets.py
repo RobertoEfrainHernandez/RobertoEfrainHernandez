@@ -8,7 +8,9 @@ OUT = S / "profile" / "assets"
 HTML = S / "gen" / "html"; HTML.mkdir(exist_ok=True)
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 ART = pathlib.Path("/Users/RobertoHernandez/Desktop/Understudy/docs/site/assets")
-SHOTS = pathlib.Path.home() / "Desktop/BertoLabsLLC/AppStoreConnect/Shipaton"
+# 1320x2868 simulator captures from the Cue build (Sept 23, 2026), the same set App Store screenshots v6 are made from.
+# 06-market-event.png is left out on purpose: it shows a known headline-tint bug.
+SHOTS = pathlib.Path.home() / "Desktop/Understudy_AppStore_Screenshots/v6-captures"
 
 FONTS = "https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Fraunces:ital,wght@1,600&display=swap"
 
@@ -121,8 +123,9 @@ h2{font-size:38px}
 
 # ---------------------------------------------------------------- understudy showcase
 def showcase(theme):
-    shots = ["screenshot-07-pick-a-path.png", "screenshot-02-portfolio.png", "screenshot-06-market-event.png"]
+    shots = ["07-pick-a-path.png", "02-portfolio.png", "05-concept-sheet.png"]
     phones = "".join(f'<div class="ph p{i}"><img src="file://{SHOTS}/{s}"></div>' for i, s in enumerate(shots))
+    phones += '<div class="cap">Screens from the app · every price simulated</div>'
     body = f"""
 <div class="stage">
   <div class="backdrop"><i style="width:560px;height:560px;left:380px;top:-240px;background:var(--estate)"></i>
@@ -130,7 +133,7 @@ def showcase(theme):
   <i style="width:420px;height:420px;left:-160px;bottom:-200px;background:var(--stocks)"></i></div>
   <div class="grid">
     <div class="copy">
-      <div class="brand"><img src="file://{ART}/icon-512.png"><div><div class="name">Understudy</div><div class="sub">Investing Practice · Berto Labs</div></div></div>
+      <div class="brand"><img src="file://{ART}/icon-cue-512.png"><div><div class="name">Understudy</div><div class="sub">Investing Practice · Berto Labs</div></div></div>
       <h2>Rehearse investing <span class="em hl">before</span> you risk a real dollar.</h2>
       <p class="lede">A practice brokerage for beginners. Real market behaviour, practice money, every concept explained with your own numbers. Nothing here is real, and that's the point.</p>
       <div class="chips">
@@ -138,7 +141,7 @@ def showcase(theme):
         <span class="chip" style="background:var(--purple-soft);color:var(--purple)">RevenueCat Shipaton 2026</span>
       </div>
       <div class="stats">
-        <div><b>8</b><span>Swift packages</span></div><div><b>358</b><span>tests on Xcode Cloud</span></div><div><b>Swift 6</b><span>strict concurrency</span></div><div><b>iOS 26</b><span>on the iOS 27 SDK</span></div>
+        <div><b>8</b><span>Swift packages</span></div><div><b>400</b><span>tests on Xcode Cloud</span></div><div><b>Swift 6</b><span>strict concurrency</span></div><div><b>iOS 26</b><span>on the iOS 27 SDK</span></div>
       </div>
     </div>
     <div class="art">{phones}</div>
@@ -157,11 +160,12 @@ h2{font-size:46px;max-width:12ch}
 .stats div{display:flex;flex-direction:column;gap:2px}
 .stats b{font-size:26px;font-weight:900;letter-spacing:-.03em}.stats span{font-size:12px;color:var(--muted);font-weight:800;letter-spacing:.04em;text-transform:uppercase}
 .art{position:relative;height:100%}
-.ph{position:absolute;top:50%;width:206px;aspect-ratio:1179/2556;border-radius:36px;overflow:hidden;background:var(--card);box-shadow:var(--shadow-lg);border:6px solid var(--card)}
+.ph{position:absolute;top:50%;width:206px;aspect-ratio:1320/2868;border-radius:36px;overflow:hidden;background:var(--card);box-shadow:var(--shadow-lg);border:6px solid var(--card)}
 .ph img{width:100%;height:100%;display:block;object-fit:cover}
 .p0{left:24px;transform:translateY(-47%) rotate(-8deg);z-index:1}
 .p1{left:176px;transform:translateY(-50%);z-index:3}
 .p2{left:328px;transform:translateY(-47%) rotate(8deg);z-index:2}
+.cap{position:absolute;z-index:4;left:24px;width:510px;bottom:4px;text-align:center;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 """
     render("understudy", theme, 1200, 640, body, css)
 
@@ -248,7 +252,7 @@ def stats(theme):
   <div class="right"><div class="spark">{bars}</div><div class="axis"><span>{(datetime.date.today()-datetime.timedelta(weeks=52)).strftime("%b %Y")}</span><span>one bar per week</span><span>{today}</span></div></div>
 </div></div>"""
     css = """
-.card{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;height:100%;margin:6px;background:var(--card);border:1px solid var(--stroke);border-radius:28px;padding:28px 36px;align-items:center}
+.card{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;height:calc(100% - 12px);margin:6px;background:var(--card);border:1px solid var(--stroke);border-radius:28px;padding:24px 36px;align-items:center}
 .left{display:flex;flex-direction:column;gap:16px}
 .tiles{display:flex;gap:28px}
 .tiles div{display:flex;flex-direction:column;gap:2px}
@@ -274,7 +278,7 @@ h3{font-size:21px;letter-spacing:-.02em;line-height:1.15}
 p{color:var(--muted);font-size:14.5px;line-height:1.45;font-weight:700}
 """
 WORK = [
- ("🧪", "Berto Labs", "Founder, iOS", "2025 – present", "Understudy (App Store, 2026) and PointsCompass (in development). Design, build, backend, store listing, marketing, the lot.", "estate"),
+ ("🧪", "Berto Labs", "Founder, iOS", "Aug 2026 – present", "Understudy (iOS, 2026) and PointsCompass (in development). Design, build, backend, store listing, marketing, the lot.", "estate"),
  ("🏢", "Tapcart", "Software Engineer II, iOS", "2021 – 2025", "E-commerce features for 1,500+ Shopify merchants: checkout and payment flows, custom UI, end-to-end ownership with product and design. Helped with the React Native transition.", "stocks"),
  ("🏀", "HoopStop", "iOS Engineer", "2018 – 2021", "Early-stage sports social network. Real-time updates, media uploads, location features. UIKit to SwiftUI migration. Swift, Core Data, Firebase.", "business"),
 ]
@@ -308,3 +312,16 @@ if __name__ == "__main__":
         if "stats" in which: stats(theme)
         if "work" in which: work(theme)
         if "beyond" in which: beyond(theme)
+    # The three opaque, photo-heavy cards ship as JPEG (sips quality 88 reproduces the committed files byte for byte).
+    # The footer is a dim room in both themes, so one file serves both.
+    def jpeg(src, dst):
+        subprocess.run(["sips", "-s", "format", "jpeg", "-s", "formatOptions", "88", str(OUT / src), "--out", str(OUT / dst)], check=True, capture_output=True)
+        print("jpeg", dst)
+    for key in ("hero", "showcase", "footer"):
+        if key not in which: continue
+        name = "understudy" if key == "showcase" else key
+        pngs = [f"{name}-{t}.png" for t in ("light", "dark")]
+        if key == "footer": jpeg(pngs[1], "footer.jpg")
+        else:
+            for p in pngs: jpeg(p, p.replace(".png", ".jpg"))
+        for p in pngs: (OUT / p).unlink()
