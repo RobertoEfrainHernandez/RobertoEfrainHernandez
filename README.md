@@ -28,7 +28,7 @@
 <p align="center"><a href="APP_STORE_URL"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-appstore-dark.png"><img src="assets/link-appstore-light.png" height="52" alt="Download on the App Store"></picture></a></p>
 -->
 
-**Understudy** is my first app as **Berto Labs**, built for the RevenueCat Shipaton 2026 and submitted to the App Store on September 14. It's a practice brokerage: real market behaviour, practice money, nothing at risk. You rehearse the decisions (buy, hold, sell, panic, don't) before you make them with real dollars. The app is the résumé, so here is what's inside it.
+**Understudy** is my first app as **Berto Labs**, built for the RevenueCat Ship-a-ton 2026 and submitted to the App Store on September 14. It's a practice brokerage: real market behaviour, practice money, nothing at risk. You rehearse the decisions (buy, hold, sell, panic, don't) before you make them with real dollars. The app is the résumé, so here is what's inside it.
 
 | | Understudy, by the numbers |
 |:--|:--|
